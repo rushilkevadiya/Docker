@@ -1,0 +1,197 @@
+🐳 DOCKER
+
+1️⃣ What is Docker?
+
+Docker is an open-source containerization platform used to build, ship, and run applications in isolated environments called containers.
+
+It allows developers to package an application along with its libraries, dependencies, and configuration files, ensuring the application runs consistently across different systems.
+
+2️⃣ Why Docker is Needed?
+
+Before Docker, applications faced issues like:
+
+* Dependency conflicts
+* Different OS environments
+* Difficult deployment
+* “Works on my machine” problem
+
+Docker solves these problems by providing a standardized runtime environment, making applications portable and reliable.
+
+3️⃣ What is Containerization?
+
+Containerization is a lightweight virtualization method where applications run in isolated user spaces called containers while sharing the host operating system kernel.
+
+Each container:
+
+* Has its own filesystem
+* Has its own processes
+* Is isolated from other containers
+
+4️⃣ Docker vs Virtual Machine
+
+| Virtual Machine       | Docker Container      |
+| --------------------- | --------------------- |
+| Requires full OS      | Shares host OS        |
+| Heavy and slow        | Lightweight and fast  |
+| Uses more resources   | Uses fewer resources  |
+| Startup takes minutes | Startup takes seconds |
+
+5️⃣ Docker Architecture 
+
+Docker follows a client-server architecture.
+
+Main Components:
+
+1. Docker Client
+The interface used by users to interact with Docker.
+
+2. Docker Daemon
+The background service that builds, runs, and manages containers.
+
+3. Docker Image
+A read-only template used to create containers.
+
+4. Docker Container
+A running instance of an image.
+
+5. Docker Registry
+A storage location for Docker images (example: Docker Hub).
+
+6️⃣ Docker Image 
+
+A Docker Image is a blueprint for creating containers.
+
+Characteristics:
+
+* Read-only
+* Contains application code and dependencies
+* Built in layers
+* Stored in Docker registries
+
+7️⃣ Docker Container 
+
+A Docker Container is a runtime instance of a Docker image.
+
+Characteristics:
+
+* Lightweight
+* Isolated
+* Can be started, stopped, or deleted
+* Uses host OS kernel
+
+8️⃣ Difference Between Image and Container
+
+| Docker Image       | Docker Container |
+| ------------------ | ---------------- |
+| Blueprint          | Running instance |
+| Static             | Dynamic          |
+| Cannot be modified | Can be modified  |
+| Stored in registry | Runs in memory   |
+
+9️⃣ Dockerfile 
+
+A Dockerfile is a text file containing instructions to build a Docker image.
+
+Purpose:
+
+* Automates image creation
+* Ensures consistency
+* Defines environment and dependencies
+* Each instruction creates a layer, which improves build efficiency through caching.
+
+🔟 Docker Layers Concept
+
+Docker images are built using layers:
+
+* Each instruction adds a new layer
+* Layers are cached
+* Only changed layers are rebuilt
+* This makes Docker fast and efficient.
+
+1️⃣1️⃣ Docker Volume 
+
+By default, container data is temporary.
+
+Docker Volumes are used to:
+
+* Persist data
+* Share data between containers
+* Store data outside containers
+* Volumes exist independently of container lifecycle.
+
+1️⃣2️⃣ Docker Networking 
+
+Docker provides networking to allow containers to:
+
+* Communicate with each other
+* Communicate with external systems
+
+Types of networks:
+
+* Bridge
+* Host
+* Overlay
+
+Networking enables microservices architecture.
+
+1️⃣3️⃣ Docker Compose 
+
+Docker Compose is a tool for defining and running multi-container applications using a single configuration file.
+
+Advantages:
+
+* Simplifies multi-container setup
+* Improves maintainability
+* Supports service dependency management
+
+1️⃣4️⃣ Docker Hub 
+
+Docker Hub is a cloud-based registry used to:
+
+* Store Docker images
+* Share images
+* Pull official images
+
+It acts as a central repository for Docker images.
+
+1️⃣5️⃣ Docker in Real-World Applications
+
+Docker is widely used for:
+
+* Web application deployment
+* Microservices
+* Continuous Integration / Continuous Deployment (CI/CD)
+* Cloud platforms (AWS, Azure, GCP)
+* DevOps workflows
+
+1️⃣6️⃣ Advantages of Docker
+
+* Platform independent
+* Faster deployment
+* Better resource utilization
+* Easy scalability
+* Improved collaboration
+
+1️⃣7️⃣ Limitations of Docker
+
+* Not suitable for GUI-based apps
+* Security depends on host OS
+* Requires container orchestration for large systems
+
+1️⃣8️⃣ Docker vs Kubernetes
+
+| Docker             | Kubernetes              |
+| ------------------ | ----------------------- |
+| Container creation | Container orchestration |
+| Single node focus  | Multi-node management   |
+| Simple             | Complex but powerful    |
+
+1️⃣9️⃣ Docker Security 
+
+Docker provides:
+
+* Process isolation
+* Resource control
+* Namespaces and cgroups
+
+However, container security depends on proper configuration.
